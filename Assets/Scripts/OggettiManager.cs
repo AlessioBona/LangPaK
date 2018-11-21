@@ -9,6 +9,8 @@ public class OggettiManager : MonoBehaviour {
     public GameObject[] oggetti;
     public TextMeshProUGUI[] nomiOggetti;
 
+    public bool picking = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -34,28 +36,26 @@ public class OggettiManager : MonoBehaviour {
             {
                 for (int i = 0; i < nomiOggetti.Length; i++)
                 {
-                    if (nomiOggetti[i].name == hit.collider.name) {
-                        nomiOggetti[i].enabled = !nomiOggetti[i].enabled;
-                    };
+                    if (!picking)
+                    {
+                        if (nomiOggetti[i].name == hit.collider.name)
+                        {
+                            nomiOggetti[i].enabled = !nomiOggetti[i].enabled;
+                        }
+                    }
+                    else
+                    {
+                        hit.collider.gameObject.SetActive(false);
+                    }
                 }
             }
         }
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Debug.Log("mouse down");
-        //    for (int i = 0; i < oggetti.Length; i++)
-        //    {
-        //        Vector3 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //        PolygonCollider2D coll = oggetti[i].GetComponent<PolygonCollider2D>();
-        //        Debug.Log(wp);
-
-        //        if (coll.OverlapPoint(wp))
-        //        {
-        //            Debug.Log("got it");
-        //            nomiOggetti[i].enabled = !nomiOggetti[i].enabled;
-        //        }
-        //    }
-        //}
     }
+
+    public void SwitchToPick()
+    {
+        picking = !picking;
+    }
+
 }

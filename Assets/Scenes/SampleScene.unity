@@ -470,7 +470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &320201723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1710,7 +1710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &495086621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1901,8 +1901,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -301, y: 187}
-  m_SizeDelta: {x: 299, y: 276}
+  m_AnchoredPosition: {x: 893, y: 463}
+  m_SizeDelta: {x: 86.4, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567612954
 MonoBehaviour:
@@ -1943,8 +1943,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1854446909}
-        m_MethodName: ToggleName
+      - m_Target: {fileID: 1149308841}
+        m_MethodName: SwitchToPick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1975,8 +1975,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 151cbd6aaec77ac498582ae21236e045, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2827,6 +2827,7 @@ MonoBehaviour:
   - {fileID: 1302377141}
   - {fileID: 663885889}
   - {fileID: 608161070}
+  picking: 0
 --- !u!1 &1152940167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,7 +3767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1722795926
 MonoBehaviour:
   m_ObjectHideFlags: 0
